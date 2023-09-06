@@ -14,6 +14,10 @@ learn [CloudWatch Synthetics](https://docs.aws.amazon.com/AmazonCloudWatch/lates
 * creates several [CloudWatch metrics in `CloudWatchSynthetics` namespace](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_metrics.html)
 * EventBridge support.  See [monitoring canary events with Amazon EventBridge](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitoring-events-eventbridge.html)
 * CloudFormation support via [`AWS::Synthetics::Canary`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html)
+* if your handler has an error (e.g. `throws Error(..)`) that is not caught it counts as a failed canary
+
+* e.g. [`Canary: Type: 'AWS::Synthetics::Canary'`](https://github.com/awslabs/aws-well-architected-labs/blob/main/static/Reliability/300_Fault_Isolation_with_Shuffle_Sharding/Code/regular.yaml#L575)
+* e.g. [`CanaryRole: Type: 'AWS::IAM::Role'`](https://github.com/awslabs/aws-well-architected-labs/blob/main/static/Reliability/300_Fault_Isolation_with_Shuffle_Sharding/Code/regular.yaml#L524)
 
 ## resources
 
